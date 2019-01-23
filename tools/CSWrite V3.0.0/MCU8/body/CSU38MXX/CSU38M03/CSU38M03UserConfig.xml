@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="gb2312"?>
+<CSU38F10>
+	<CodeOptionWord>
+		Addr="0xffff"	
+		<OptionItem>	 
+			Name="ICK_SEL"
+			OptionInformation="内部晶振频率选择"
+			<Option>
+				Name="16M"
+				Value="0x0000"
+				<!-- LimitOptionName="指令周期=2个时钟周期"
+				LimitOptionValue ="0x1230" -->
+			</Option>
+			<Option>
+				Name="8M"
+				Value="0x2000"
+			</Option>
+			<Option>
+				Name="4M"
+				Value="0x4000"
+			</Option>
+			<Option>
+				Name="2M"
+				Value="0x6000"
+			</Option>
+		</OptionItem>
+		
+		<OptionItem>
+			Name="RST_DLY"
+			OptionInformation="上电复位延时时间选择"		
+			<Option>
+				Name="98ms"
+				Value="0x0000"
+			</Option>
+					
+			<Option>
+				Name="49ms"
+				Value="0x0800"
+			</Option>
+					
+			<Option>
+				Name="10ms"
+				Value="0x1000"
+			</Option>
+					
+			<Option>
+				Name="1ms"
+				Value="0x1800"
+			</Option>
+		</OptionItem>	
+		
+		<OptionItem>
+			Name="RES_OP"
+			OptionInformation="超低功耗模式电压上升沿检测使能"			
+			<Option>
+				Name="使能上升沿检测"
+				Value="0x0000"
+			</Option>
+					
+			<Option>
+				Name="不使能上升沿检测"
+				Value="0x0400"
+			</Option>
+		</OptionItem>
+			
+		<OptionItem>
+			Name="INS_OP"
+			OptionInformation="指令周期配置选项"		
+			<Option>
+				Name="指令周期只可通过代码选项配置"
+				Value="0x0000"
+			</Option>
+					
+			<Option>
+				Name="指令周期可动态配置"
+				Value="0x0200"
+			</Option>
+		</OptionItem>	
+		
+		<OptionItem>
+			Name="WDTA_EN"
+			OptionInformation="WDT自动使能位"		
+			<Option>
+				Name="WDT使能自动使能功能"
+				Value="0x0000"
+			</Option>
+					
+			<Option>
+				Name="WDT不使能自动使能功能"
+				Value="0x0100"
+			</Option>
+		</OptionItem>
+
+		<OptionItem>
+			Name="CLK_SEL"
+			OptionInformation="指令周期选择"
+			<Option>
+				Name="指令周期=2个时钟周期"
+				Value="0x0000"
+			</Option>
+					
+			<Option>
+				Name="指令周期=4个时钟周期"
+				Value="0x0040"
+			</Option>
+					
+			<Option>
+				Name="指令周期=8个时钟周期"
+				Value="0x0080"
+			</Option>
+					
+			<Option>
+				Name="指令周期=16个时钟周期"
+				Value="0x00c0"
+			</Option>
+		</OptionItem>
+
+		<OptionItem>
+			Name="LVD_SEL"
+			OptionInformation="LVD配置"
+			<Option>
+				Name="VDD低于1.8V复位，LVD复位检测系统关闭"
+				Value="0x0000"
+			</Option>
+					
+			<Option>
+				Name="VDD低于1.8V复位，LVD复位系统"
+				Value="0x0008"
+			</Option>
+					
+			<Option>
+				Name="VDD低于2.0V复位，LVD复位系统"
+				Value="0x0010"
+			</Option>
+					
+			<Option>
+				Name="VDD低于2.4V复位，LVD复位系统"
+				Value="0x0018"
+			</Option>
+								
+			<Option>
+				Name="VDD低于3.0V复位，LVD复位系统"
+				Value="0x0020"
+			</Option>
+			<Option>
+				Name="VDD低于3.6V复位，LVD复位系统"
+				Value="0x0038"
+			</Option>
+		</OptionItem>			
+					
+		<OptionItem>
+			Name="RESET_PIN"
+			OptionInformation="复位引脚选择"			
+			<Option>
+				Name="PT1.3作为普通输入口"
+				Value="0x0000"
+			</Option>		
+			<Option>
+				Name="PT1.3作为复位引脚"
+				Value="0x0004"
+			</Option>
+		</OptionItem>	
+		
+		<OptionItem>
+			Name="XTAL_PIN"
+			OptionInformation="晶振引脚选择"					
+			<Option>
+				Name="PT1.1和PT1.2作为普通IO口"
+				Value="0x0000"
+			</Option>	
+			<Option>
+				Name="PT1.1作为外部RC时钟输入"
+				Value="0x0001"
+			</Option>		
+			<Option>
+				Name="PT1.1和PT1.2接外部晶振为32768Hz"
+				Value="0x0002"
+			</Option>	
+			<Option>
+				Name="PT1.1和PT1.2接外部晶振2M~16MHz"
+				Value="0x0003"
+			</Option>
+		</OptionItem>	
+	</CodeOptionWord>	
+</CSU38F10>

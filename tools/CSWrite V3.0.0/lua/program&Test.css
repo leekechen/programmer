@@ -1,0 +1,142 @@
+require("csv")
+require("trace")
+require("gui")
+require("key")
+require("led")
+require("download")
+require("database")
+require("devCtrl")
+require("devTest")
+require("program")
+
+DATE                          = os.date("%y%m%d")
+TIME                          = os.date("%H%M%S")
+
+WRITER_ID                     = nil
+
+PROGRAM_AGAIN_TIMES           = 2
+TEST_AGAIN_TIMES              = 2
+
+DEVICE_TABLE                  = {"dev1", "dev2", "dev3", "dev4"}
+
+ACCOUNT                       = "$ACCOUNT$"
+PASSWORD                      = "$PASSWORD$"
+UUID                          = "$UUID$"
+FIRMWARE_CRC32                = "$FIRMWARE_CRC32$"
+TOTAL_PROGRAM_TIME            = $TOTAL_PROGRAM_TIME$
+
+function main()
+    local err
+    local hWriter
+    local MAC = {}
+    local crc32
+    local hex = {name = nil, times = nil, crc32 = nil }
+
+    csvInit(DATE)
+    logName = traceInit(DATE)
+    guiInit()
+    dbInit()
+
+    --close the preview opened writer
+    wr_close();
+
+    --open the new writer
+    trace("[Initialize] create data link from PC to CSWriter")
+    hWriter = wr_open();
+    if (hWriter == nil) then
+        trace("[Initialize] wr_open() failed")
+        return
+    end
+
+	WRITER_ID = wr_getinfo(hWriter, "writerid")
+    trace("[Initialize] Wellcom to WiFi Program/Test Integrated Platform!, WriterID="..WRITER_ID)
+    trace("[Initialize] This version is for CST84F12!")    
+
+    trace("[Initialize] wwa_login("..ACCOUNT..", "..PASSWORD..")")
+    err = wwa_login(ACCOUNT, PASSWORD)
+    if (err ~= 1) then
+        trace("[Initialize] wwa_login() failed!")
+        guiShowPrompt(guiPromptID_downloadErr)
+        return
+    end
+
+    hex.name  = UUID
+    hex.times = TOTAL_PROGRAM_TIME
+    hex.crc32 = FIRMWARE_CRC32
+    err, MAC, crc32 = dowload(hWriter, hex)
+    if (err == nil) then
+        wr_close(hWriter)
+        return
+    end
+
+    programAndTest(hWriter, MAC, crc32)
+
+    wr_close(hWriter)
+end
+
+function programAndTest(handle, strMAC, crc32)
+    local ret
+    local num
+    local flashID = {}
+    local devList = {}
+    local current = {}
+    local progRet = {}
+    local testRet = {}
+    local MAC = {mini = nil, max = nil, cur = nil}
+
+    assert(handle ~= nil)
+    assert(strMAC.mini ~= nil)
+    assert(strMAC.max ~= nil)
+    assert(strMAC.cur ~= nil)
+    assert(crc32 ~= nil)
+
+    MAC.mini = tonumber(strMAC.mini, 16)
+    MAC.max  = tonumber(strMAC.max, 16)
+    MAC.cur  = tonumber(strMAC.cur, 16)
+	if (MAC.cur == nil) then
+		MAC.cur = MAC.mini
+	end
+
+    while (MAC.cur <= MAC.max) do
+        waitingForKey(handle, KEY_PRESS)
+
+        ledSwitch(hWriter, DEVICE_TABLE[1], LED_OFF)
+        ledSwitch(hWriter, DEVICE_TABLE[2], LED_OFF)
+        ledSwitch(hWriter, DEVICE_TABLE[3], LED_OFF)
+        ledSwitch(hWriter, DEVICE_TABLE[4], LED_OFF)
+
+        --1st, check the device current whether is valid
+        current = devGetCurrent(handle)
+        devList = testDevCurrentIsValid(current)
+
+        --2nd, got the flashID from valid devList
+        flashID = devGetFlashID(handle, devList)
+
+        --3rd, got the device the status which whether had been program MAC
+        devList, num = dbDevIsProgramed(flashID)
+
+        if (num == 0) then
+            devList = DEVICE_TABLE
+        elseif (num > 0) then
+            --4th, start to programmming
+            devList, MAC = program(handle, flashID, devList, MAC)
+        end
+
+        dbTableSummaryUpdateCurMAC(MAC, crc32)
+
+        --5th, got the device status which whether had been tested
+        devList, num = dbDevIsTested(devList, flashID)
+        if (num > 0) then
+            --6th, start to testing
+            ret, testRet = test(handle, devList, flashID)
+        end
+
+        dbCsvRowCreate(flashID)
+
+        waitingForKey(handle, KEY_RELEASE)
+    end
+	
+	wr_uploadlog(handle, UUID,logName); 
+end
+
+main()

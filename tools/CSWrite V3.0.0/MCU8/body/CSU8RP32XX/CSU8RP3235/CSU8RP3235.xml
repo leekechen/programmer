@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RP3235</BodyName>
+		<BodySeries>CSU3228</BodySeries>
+		<BodyDescription>芯海科技\n2K×16位程序存储器\n256字节RAM\n5路12位SAR ADC\n2路高速PWM\n17位双向IO和1位输入口</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x1000</ProFileSize>
+		
+		<ChipRomSpace>0x1000</ChipRomSpace>
+		<ProRomSpace>0x800</ProRomSpace>
+		<LoadRomSpace>0x1000</LoadRomSpace>
+		<ReadRomSpace>0x1000</ReadRomSpace>
+		<DispRomSpace>0x800</DispRomSpace>
+		<ChecksumRomSpace>0x1000</ChecksumRomSpace>
+		
+		<CodeOptionNum>2</CodeOptionNum>
+		
+		<CodeOptionValue>0x1010:0x1941;0x1011:0xffff;</CodeOptionValue>
+		<CodeOptionRead>0x1010:0xFFFF;0x1011:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x1010</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>8227</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>8229</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>8231</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>8233</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata3235</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

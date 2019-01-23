@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RP3117B</BodyName>
+		<BodySeries>CSU8RT30113</BodySeries>
+		<BodyDescription>芯海科技\n1K×14位程序存储器\n64字节RAM\n4路12bitADC\n2路高速PWM\n7个双向IO口和1个输入口</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>14</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x400</ProFileSize>
+		
+		<ChipRomSpace>0x400</ChipRomSpace>
+		<ProRomSpace>0x400</ProRomSpace>
+		<LoadRomSpace>0x400</LoadRomSpace>
+		<ReadRomSpace>0x400</ReadRomSpace>
+		<DispRomSpace>0x400</DispRomSpace>
+		<ChecksumRomSpace>0x400</ChecksumRomSpace>
+		
+		<CodeOptionNum>1</CodeOptionNum>
+		
+		<CodeOptionValue>0x400:0x3801;</CodeOptionValue>
+		<CodeOptionRead>0x400:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x400</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>2051</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>2053</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>2055</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>2057</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata3117b</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CST34M97</BodyName>
+		<BodySeries>CSU18MX86</BodySeries>
+		<BodyDescription>芯海科技\n8K×16位程序存储器\n128Byte EEPROM\n488字节RAM\n24位SigmaDelta ADC</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x2000</ProFileSize>
+		
+		<ChipRomSpace>0x2000</ChipRomSpace>
+		<ProRomSpace>0x2000</ProRomSpace>
+		<LoadRomSpace>0x2080</LoadRomSpace>
+		<ReadRomSpace>0x2080</ReadRomSpace>
+		<DispRomSpace>0x2000</DispRomSpace>
+		<ChecksumRomSpace>0x2000</ChecksumRomSpace>
+		
+		<CodeOptionNum>1</CodeOptionNum>
+		
+		<CodeOptionValue>0x2080:0x0001;</CodeOptionValue>
+		<CodeOptionRead>0x2080:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x2080</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>16643</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>16642</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>16646</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>16647</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata4m97</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

@@ -1,0 +1,23 @@
+print("AutoMode");
+h = wr_open();
+toolcmd("DOWNLOAD");
+sleep(1000);
+while(not(wr_isidle(h)) ) 
+do 
+    sleep(1000);
+end
+print("downLoad completed");
+toolcmd("WRITE");
+sleep(1000);
+while(not(wr_isidle(h)) ) 
+do 
+    sleep(1000);
+end
+print("program completed");
+toolcmd("VERIFY");
+sleep(1000);
+while(not(wr_isidle(h)) ) 
+do 
+    sleep(1000);
+end
+print("verify completed");

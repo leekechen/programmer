@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<Layout>
+  language = "*"
+
+  <StyleDefine>
+    L30 = ">"
+  </StyleDefine>
+
+  <ViewStyle>
+    sel.fore = "#ffff00"
+    sel.back = "#000080"
+
+    style.0 = "font:Courier New, size:10, fore:#333333"
+    style.1 = "font:Courier New, size:12, fore:#333333"
+    style.20  = "fore:#008000"
+    style.21  = "fore:#c80000"
+    style.30  = "fore:#008000"
+  </ViewStyle>
+
+  <EscapeCharacters>
+    backspace = "\b"
+    backhome = "\f"
+  </EscapeCharacters>
+
+  <InvokeCommand>
+    name = "command_call"
+  </InvokeCommand>
+
+  <NotifyClasses>
+    <Classe>
+      clsid = "{49BB519D-EB9E-4bad-983B-1E3F92DEA788}"
+      flags = "-1"
+    </Classe>
+  </NotifyClasses>
+
+</Layout>

@@ -1,0 +1,46 @@
+T2840 022:791 SEGGER J-Link V6.32i Log File (0001ms, 5398ms total)
+T2840 022:791 DLL Compiled: Jul 24 2018 15:19:55 (0001ms, 5398ms total)
+T2840 022:791 Logging started @ 2019-01-23 17:06 (0001ms, 5398ms total)
+T2840 022:792 JLINK_SetWarnOutHandler(...) (0000ms, 5398ms total)
+T2840 022:792 JLINK_OpenEx(...)
+Firmware: J-Link ARM V8 compiled Jan 31 2018 18:34:52
+Hardware: V8.00
+S/N: 20080643
+Feature(s): RDI,FlashDL,FlashBP,JFlash,GDBFull
+TELNET listener socket opened on port 19021WEBSRV 
+Starting webserver (0025ms, 5423ms total)
+T2840 022:792 WEBSRV Webserver running on local port 19080 (0025ms, 5423ms total)
+T2840 022:792   returns O.K. (0025ms, 5423ms total)
+T2840 022:817 JLINK_GetEmuCaps()  returns 0xB9FF7BBF (0000ms, 5423ms total)
+T2840 022:818 JLINK_TIF_GetAvailable(...) (0001ms, 5424ms total)
+T2840 022:819 JLINK_SetErrorOutHandler(...) (0000ms, 5424ms total)
+T2840 022:819 JLINK_ExecCommand("ProjectFile = "E:\svn\cswrite\CSWrite3.0\trunk\projects\firmware\JLinkSettings.ini"", ...).   returns 0x00 (0005ms, 5429ms total)
+T2840 022:824 JLINK_ExecCommand("Device = STM32F407VETx", ...). Device "STM32F407VE" selected.  returns 0x00 (0002ms, 5431ms total)
+T2840 022:826 JLINK_ExecCommand("DisableConnectionTimeout", ...).   returns 0x01 (0000ms, 5431ms total)
+T2840 022:826 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 5431ms total)
+T2840 022:826 JLINK_GetDLLVersion()  returns 63209 (0000ms, 5431ms total)
+T2840 022:826 JLINK_GetFirmwareString(...) (0000ms, 5431ms total)
+T2840 022:826 JLINK_GetDLLVersion()  returns 63209 (0000ms, 5431ms total)
+T2840 022:826 JLINK_GetCompileDateTime() (0000ms, 5431ms total)
+T2840 022:826 JLINK_GetFirmwareString(...) (0000ms, 5431ms total)
+T2840 022:826 JLINK_GetHardwareVersion()  returns 0x13880 (0000ms, 5431ms total)
+T2840 022:826 JLINK_TIF_Select(JLINKARM_TIF_SWD)  returns 0x00 (0004ms, 5435ms total)
+T2840 022:830 JLINK_SetSpeed(2000) (0001ms, 5436ms total)
+T2840 022:831 JLINK_SetResetType(JLINKARM_RESET_TYPE_NORMAL)  returns JLINKARM_RESET_TYPE_NORMAL (0000ms, 5436ms total)
+T2840 022:831 JLINK_Reset() >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF>
+ >0x0D TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed.JLINK_GetId() >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed. >0x0D TIF>
+ >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed.  returns 0x00000000 (0719ms, 7188ms total)
+T2840 024:585 JLINK_GetId() >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed. >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x0D TIF> >0x10B TIF> >0x10F TIF> >0x10B TIF> >0x10F TIF>STM32 (connect): Can not attach to CPU. Trying connect under reset. >0x10B TIF>
+ >0x10F TIF> >0x10B TIF> >0x10F TIF>
+  ***** Error: STM32: Connecting to CPU via connect under reset failed.  returns 0x00000000 (0713ms, 7901ms total)
+T2840 025:300 JLINK_GetFirmwareString(...) (0000ms, 7901ms total)
+T3ECC 025:300 
+  ***** Error: Connection to emulator lost! (5219ms, 13120ms total)
+T2840 065:238 JLINK_Close() (0006ms, 7907ms total)
+T2840 065:238  (0006ms, 7907ms total)
+T2840 065:238 Closed (0006ms, 7907ms total)

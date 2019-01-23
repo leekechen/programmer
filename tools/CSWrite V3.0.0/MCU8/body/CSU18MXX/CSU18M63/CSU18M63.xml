@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU18M63</BodyName>
+		<BodySeries>CSU18MX88</BodySeries>
+		<BodyDescription>芯海科技\n8K×16位程序存储器\n896字节RAM\n37位双向I/O口\n2路24bit Sigma-Delta型ADC</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x2000</ProFileSize>
+		
+		<ChipRomSpace>0x2000</ChipRomSpace>
+		<ProRomSpace>0x2000</ProRomSpace>
+		<LoadRomSpace>0x2080</LoadRomSpace>
+		<ReadRomSpace>0x2080</ReadRomSpace>
+		<DispRomSpace>0x2000</DispRomSpace>
+		<ChecksumRomSpace>0x2000</ChecksumRomSpace>
+		
+		<CodeOptionNum>2</CodeOptionNum>
+		
+		<CodeOptionValue>0x2080:0xffff;0x2081:0xfff8;</CodeOptionValue>
+		<CodeOptionRead>0x2080:0xFFFF;0x2081:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x2080</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>16647</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>16649</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>16652</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>16653</ChkLChipAddrOfBytes>
+		
+		<Package>qfn16;qfn20;wlcsp16;</Package>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata8m63</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

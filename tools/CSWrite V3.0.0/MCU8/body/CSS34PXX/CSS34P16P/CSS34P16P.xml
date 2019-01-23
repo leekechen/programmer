@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSS34P16P</BodyName>
+		<BodySeries>CSS34PX13</BodySeries>
+		<BodyDescription>芯海科技\n4K×16位程序存储器\n232字节RAM\n9路12bitADC\n17位双向I/O口1位输入口</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x1000</ProFileSize>
+		
+		<ChipRomSpace>0x1000</ChipRomSpace>
+		<ProRomSpace>0x1000</ProRomSpace>
+		<LoadRomSpace>0x1000</LoadRomSpace>
+		<ReadRomSpace>0x1000</ReadRomSpace>
+		<DispRomSpace>0x1000</DispRomSpace>
+		<ChecksumRomSpace>0x1000</ChecksumRomSpace>
+		
+		<CodeOptionNum>3</CodeOptionNum>
+		
+		<CodeOptionValue>0x1000:0x8100;0x1001:0x1000;0x100a:0x0000;</CodeOptionValue>
+		<CodeOptionRead>0x1000:0xFFFF;0x1001:0xFFFF;0x100a:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x1001</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>8197</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>8193</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>8199</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>8201</ChkLChipAddrOfBytes>
+		
+		<Package>ssop16;</Package>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updatap16p</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RP1185</BodyName>
+		<BodySeries>CSU11xx</BodySeries>
+		<BodyDescription>芯海科技\n2K×16位程序存储器\n128字节RAM\n24位SigmaDelta ADC</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x1000</ProFileSize>
+		
+		<ChipRomSpace>0x800</ChipRomSpace>
+		<ProRomSpace>0x800</ProRomSpace>
+		<LoadRomSpace>0x1000</LoadRomSpace>
+		<ReadRomSpace>0x800</ReadRomSpace>
+		<DispRomSpace>0x800</DispRomSpace>
+		<ChecksumRomSpace>0x1000</ChecksumRomSpace>
+		
+		<CodeOptionNum>1</CodeOptionNum>
+		
+		<CodeOptionValue>0x7ff:0x0001</CodeOptionValue>
+		<CodeOptionRead>0x7ff:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x7ff</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes></IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes></WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes></ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes></ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata1185</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

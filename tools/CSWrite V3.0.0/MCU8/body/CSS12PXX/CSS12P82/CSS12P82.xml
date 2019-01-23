@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSS12P82</BodyName>
+		<BodySeries>CSS12PX82</BodySeries>
+		<BodyDescription>芯海科技\n2K×16位程序存储器\n256字节RAM\n24bitADC\n5位双向I/O口</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x800</ProFileSize>
+		
+		<ChipRomSpace>0x800</ChipRomSpace>
+		<ProRomSpace>0x800</ProRomSpace>
+		<LoadRomSpace>0x800</LoadRomSpace>
+		<ReadRomSpace>0x800</ReadRomSpace>
+		<DispRomSpace>0x800</DispRomSpace>
+		<ChecksumRomSpace>0x800</ChecksumRomSpace>
+		
+		<CodeOptionNum>1</CodeOptionNum>
+		
+		<CodeOptionValue>0x7fd:0x3001;</CodeOptionValue>
+		<CodeOptionRead>0x7fd:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x7fd</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>4092</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>4095</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>4096</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>4097</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata2p82</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

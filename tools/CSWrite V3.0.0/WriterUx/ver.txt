@@ -1,0 +1,24 @@
+[CSWriterUx.exe]
+version = 305
+path = 
+obsolete = 0
+[gseditor.dll]
+version = 303
+path = 
+obsolete = 0
+[config.txt]
+version = 303
+path = config
+obsolete = 0
+[DllCSScript.dll]
+version = 304
+path = 
+obsolete = 0
+[DllWriterCom.dll]
+version = 305
+path = 
+obsolete = 0
+[sqlite3.dll]
+version = 303
+path = 
+obsolete = 0

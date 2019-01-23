@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU34F10</BodyName>
+		<BodySeries>CSU8RF30450</BodySeries>
+		<BodyDescription>芯海科技\n4K×16位程序存储器\n488字节RAM\n13路12位SAR ADC\n4路Timer/1路UART/1路SPI/1路Compator/1路COG\n支持TBLP和MOVP/支持逻辑电平配置\n18位双向IO和1位输入口</BodyDescription>
+		<MemoryType>FLASH</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x2000</ProFileSize>
+		
+		<ChipRomSpace>0x2000</ChipRomSpace>
+		<ProRomSpace>0x1000</ProRomSpace>
+		<LoadRomSpace>0x2080</LoadRomSpace>
+		<ReadRomSpace>0x2080</ReadRomSpace>
+		<DispRomSpace>0x1000</DispRomSpace>
+		<ChecksumRomSpace>0x2000</ChecksumRomSpace>
+		
+		<CodeOptionNum>1</CodeOptionNum>
+		
+		<CodeOptionValue>0x2088:0x0540;</CodeOptionValue>
+		<CodeOptionRead>0x2088:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x2088</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>16</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>16791</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>16795</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>16665</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>16667</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata4f10</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

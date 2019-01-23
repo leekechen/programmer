@@ -1,0 +1,12 @@
+[cspkgs.sc]
+tag = firmver_sc
+version = 1044
+path = clkdata
+obsolete = 0
+
+[cspkgs.sl]
+tag = firmver_sl
+version = 1044
+path = clkdata
+obsolete = 0
+

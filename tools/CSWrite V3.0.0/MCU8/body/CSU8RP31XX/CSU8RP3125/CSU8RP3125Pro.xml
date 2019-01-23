@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<ProOption>
+		<VoltageVPP>  8500  </VoltageVPP>
+		<VoltageVDD>  5000  </VoltageVDD>
+		<OffsetVPP>200</OffsetVPP>
+		<OffsetVDD>200</OffsetVDD>
+		<IrcTrimming>2</IrcTrimming>
+		<WdtTrimming>20</WdtTrimming>
+		<IDLEN>6</IDLEN>
+		<ID1>49</ID1>
+		<ID2>24</ID2>
+		<ID3>68</ID3>
+	</ProOption>
+	
+</Chipsea>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RP1391</BodyName>
+		<BodySeries>CSU1300</BodySeries>
+		<BodyDescription>芯海科技\n8K×16位程序存储器\n488字节RAM\n16位双向I/O口\n2路24bit Sigma-Delta型ADC\n3路PWM输出</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x2080</ProFileSize>
+		
+		<ChipRomSpace>0x2000</ChipRomSpace>
+		<ProRomSpace>0x2000</ProRomSpace>
+		<LoadRomSpace>0x2080</LoadRomSpace>
+		<ReadRomSpace>0x2000</ReadRomSpace>
+		<DispRomSpace>0x2000</DispRomSpace>
+		<ChecksumRomSpace>0x2000</ChecksumRomSpace>
+		
+		<CodeOptionNum>1</CodeOptionNum>
+		
+		<CodeOptionValue>0x2070:0x2500;</CodeOptionValue>
+		<CodeOptionRead>0x2070:0xff00;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x2070</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>8</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>16497</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>16498</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>16499</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>16500</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata1391</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

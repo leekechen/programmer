@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU32PB30</BodyName>
+		<BodySeries>CSS32PX30</BodySeries>
+		<BodyDescription>芯海科技\n2K×16位程序存储器\n104字节RAM\n5路12bitADC\n1路互补PWM</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x800</ProFileSize>
+		
+		<ChipRomSpace>0x800</ChipRomSpace>
+		<ProRomSpace>0x800</ProRomSpace>
+		<LoadRomSpace>0x800</LoadRomSpace>
+		<ReadRomSpace>0x800</ReadRomSpace>
+		<DispRomSpace>0x800</DispRomSpace>
+		<ChecksumRomSpace>0x800</ChecksumRomSpace>
+		
+		<CodeOptionNum>2</CodeOptionNum>
+		
+		<CodeOptionValue>0x0800:0xfffd;0x0801:0xff3f;</CodeOptionValue>
+		<CodeOptionRead>0x0800:0xFFFF;0x0801:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x0800</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>4101</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>4103</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>4107</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>4109</ChkLChipAddrOfBytes>
+		
+		<Package>sop16;</Package>
+		
+		
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata2p30</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

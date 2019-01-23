@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RF3111</BodyName>
+		<BodySeries>CSU8RE3110</BodySeries>
+		<BodyDescription>芯海科技\n1K×16位程序存储器\n96字节RAM\n54字节的E2PROM\n2路高速PWM\n5个双向IO口和1个输入口</BodyDescription>
+		<MemoryType>FLASH</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x400</ProFileSize>
+		
+		<ChipRomSpace>0x400</ChipRomSpace>
+		<ProRomSpace>0x400</ProRomSpace>
+		<LoadRomSpace>0x400</LoadRomSpace>
+		<ReadRomSpace>0x400</ReadRomSpace>
+		<DispRomSpace>0x400</DispRomSpace>
+		<ChecksumRomSpace>0x400</ChecksumRomSpace>
+		
+		<CodeOptionNum>1</CodeOptionNum>
+		
+		<CodeOptionValue>0x041C:0x0100;</CodeOptionValue>
+		<CodeOptionRead>0x041C:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x041C</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>8</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>2105</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>2106</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>2107</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>2108</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata3111</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

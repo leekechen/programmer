@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<Layout>
+	language = "*"
+
+	<Catalog>
+    name = "output"
+    <StyleDefine>
+    </StyleDefine>
+		
+		<ViewStyle>
+      sel.fore = "#ffff00"
+      sel.back = "#000080"
+
+      style.0 = "font:宋体, size:9, fore:#444444"
+      style.1 = "font:宋体, size:11, fore:#444444"
+      style.20  = "fore:#008000"
+      style.21  = "fore:#c80000"
+    </ViewStyle>
+
+    <EscapeCharacters>
+			backspace = "\b"
+			backhome = "\f"
+		</EscapeCharacters>
+		
+	</Catalog>
+
+</Layout>

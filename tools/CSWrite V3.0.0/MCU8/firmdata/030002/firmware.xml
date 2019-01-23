@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<firmware> 
+  <file>firmware.cs</file>  
+  <version>3.0.2</version>  
+  <size>24000</size>  
+  <chip> 
+    <name>csu8rp3228</name> 
+  </chip>  
+  <chip> 
+    <name>csu8rp3115B</name> 
+  </chip> 
+  <chip> 
+    <name>csu8rp3429</name> 
+  </chip>
+</firmware>

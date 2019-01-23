@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RP3218</BodyName>
+		<BodySeries>CSU8RT30213</BodySeries>
+		<BodyDescription>芯海科技\n2K×16位程序存储器\n128字节RAM\n9路12bitADC\n17位双向I/O口1位输入口</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x800</ProFileSize>
+		
+		<ChipRomSpace>0x800</ChipRomSpace>
+		<ProRomSpace>0x800</ProRomSpace>
+		<LoadRomSpace>0x800</LoadRomSpace>
+		<ReadRomSpace>0x800</ReadRomSpace>
+		<DispRomSpace>0x800</DispRomSpace>
+		<ChecksumRomSpace>0x800</ChecksumRomSpace>
+		
+		<CodeOptionNum>2</CodeOptionNum>
+		
+		<CodeOptionValue>0x0800:0xffff;0x0801:0xfb01;</CodeOptionValue>
+		<CodeOptionRead>0x0800:0xffff;0x0801:0xffff;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x801</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>4101</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>4097</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>4103</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>4105</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata3218</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

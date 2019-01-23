@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RF3422</BodyName>
+		<BodySeries>CSU8RE3420</BodySeries>
+		<BodyDescription>芯海科技\n4K×16位程序存储器\n232字节RAM\n12路12位SAR ADC\n3路高速PWM\n25位双向IO和1位输入口</BodyDescription>
+		<MemoryType>FLASH</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x1000</ProFileSize>
+		
+		<ChipRomSpace>0x1000</ChipRomSpace>
+		<ProRomSpace>0x1000</ProRomSpace>
+		<LoadRomSpace>0x1000</LoadRomSpace>
+		<ReadRomSpace>0x1000</ReadRomSpace>
+		<DispRomSpace>0x1000</DispRomSpace>
+		<ChecksumRomSpace>0x1000</ChecksumRomSpace>
+		
+		<CodeOptionNum>2</CodeOptionNum>
+		
+		<CodeOptionValue>0x1038:0x0900;0x103a:0xfffe;</CodeOptionValue>
+		<CodeOptionRead>0x1038:0xffff;0x103a:0xffff;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x1038</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>8</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>8305</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>8306</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>8307</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>8308</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata3422</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

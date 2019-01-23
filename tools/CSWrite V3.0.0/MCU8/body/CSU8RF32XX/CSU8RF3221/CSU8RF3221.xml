@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSU8RF3221</BodyName>
+		<BodySeries>CSU8RE3220</BodySeries>
+		<BodyDescription>芯海科技\n2K×16位程序存储器\n128字节RAM\n8路12位SAR ADC\n2路高速PWM\n17位双向IO和1位输入口</BodyDescription>
+		<MemoryType>FLASH</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x800</ProFileSize>
+		
+		<ChipRomSpace>0x800</ChipRomSpace>
+		<ProRomSpace>0x800</ProRomSpace>
+		<LoadRomSpace>0x800</LoadRomSpace>
+		<ReadRomSpace>0x800</ReadRomSpace>
+		<DispRomSpace>0x800</DispRomSpace>
+		<ChecksumRomSpace>0x800</ChecksumRomSpace>
+		
+		<CodeOptionNum>2</CodeOptionNum>
+		
+		<CodeOptionValue>0x0838:0x0900;0x083a:0xfffe;</CodeOptionValue>
+		<CodeOptionRead>0x0838:0xffff;0x083a:0xffff;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x0838</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>8</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>4209</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>4210</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>4211</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>4212</ChkLChipAddrOfBytes>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata3221</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

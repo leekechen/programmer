@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Chipsea>
+	<Properties>
+		<BodyName>CSS38M21</BodyName>
+		<BodySeries>CSU38MX10</BodySeries>
+		<BodyDescription>芯海科技\n8K×16位程序存储器\n1K字节RAM\n256字节EEPROM\n26路12位SAR ADC\n6路PWM/1路UART/1路SPI\n支持TBLP和MOVP/支持逻辑电平配置\n26路双向IO</BodyDescription>
+		<MemoryType>OTP</MemoryType>
+		<MemoryWidth>16</MemoryWidth>
+		<ProFileType>eCSHEX</ProFileType>
+		<ProFileSize>0x2000</ProFileSize>
+		
+		<ChipRomSpace>0x2000</ChipRomSpace>
+		<ProRomSpace>0x2000</ProRomSpace>
+		<LoadRomSpace>0x2000</LoadRomSpace>
+		<ReadRomSpace>0x2000</ReadRomSpace>
+		<DispRomSpace>0x2000</DispRomSpace>
+		<ChecksumRomSpace>0x2000</ChecksumRomSpace>
+		
+		<CodeOptionNum>2</CodeOptionNum>
+		
+		<CodeOptionValue>0x2000:0x0101;0x2001:0x0000;</CodeOptionValue>
+		<CodeOptionRead>0x2000:0xFFFF;0x2001:0xFFFF;</CodeOptionRead>
+		
+		<ProtectChipAddrOfWords>0x2000</ProtectChipAddrOfWords>
+		<ProtectChipBitOfAddr>0</ProtectChipBitOfAddr>
+		<IrcTrimChipAddrOfBytes>16389</IrcTrimChipAddrOfBytes>
+		<WdtTrimChipAddrOfBytes>16395</WdtTrimChipAddrOfBytes>
+		<ChkHChipAddrOfBytes>16411</ChkHChipAddrOfBytes>
+		<ChkLChipAddrOfBytes>16413</ChkLChipAddrOfBytes>
+		
+		<Package>ssop28;</Package>
+	</Properties>
+	
+	
+	<Cmdhandler>
+		<ProCodeOption>codeoption.dll</ProCodeOption>
+		<ProClHex>updata8m21</ProClHex>
+		<ProIdCfg>30450idcfg.dll</ProIdCfg>
+	</Cmdhandler>
+	
+</Chipsea>
+	
+	
+	
+	

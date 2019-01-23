@@ -1,0 +1,19 @@
+[Global]
+AppTitle=CSWriterUx，V3.0.1
+HomeURL =http://wide.chipsea.com/writer/
+
+
+[WriterPropWnd]
+MCU8 = ADDRESS-VALUE;CODE-OPTION;USER-CONFIG;ROLL-CODE;
+
+
+[About]
+Caption = 关于 CSWriterUx
+Lable1 = CSWriterUx，V3.0.1
+Lable2 = 版权所有 C 芯海科技（深圳）股份有限公司 2017-2018。保留一切权利。
+Remark = CSWriterUx V3.0.1是芯海科技最新的烧录工具软件。\n它支持芯海8bitMCU，无线模块烧录!
+
+[ScriptList]
+;下载+烧录 =  Script1.css
+;下载+烧录+校验 =  Script2.css
+;下载+查空+烧录+校验 =  Script3.css
