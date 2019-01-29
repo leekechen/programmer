@@ -9,7 +9,7 @@
 
 
 
-struct voltage power_voltage;
+struct tlv_voltage power_voltage;
 
 
 struct test_case test_power_value = {
@@ -73,14 +73,16 @@ int32_t test_power_handle(int argc, char* argv[])
         }
         test_print("input: %d mV\n",voltage);
         if((voltage<10000)&&(voltage>0)){
-            power_voltage.rated = voltage;
+            power_voltage.value = voltage;
             if(argc){
-                power_voltage_set(POWER_TYPE_VDD,&power_voltage);  
-                power_voltage_switch(POWER_TYPE_VDD,POWER_FLAG_ON);
+                power_voltage.type = TLV_DESC_VOLTAGE_TYPE_VDD;
+                power_voltage_set(&power_voltage);  
+                power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VDD, POWER_FLAG_ON);
             }
             else{
-                power_voltage_set(POWER_TYPE_VPP,&power_voltage);    
-                power_voltage_switch(POWER_TYPE_VPP,POWER_FLAG_ON);                        
+                power_voltage.type = TLV_DESC_VOLTAGE_TYPE_VPP;
+                power_voltage_set(&power_voltage);    
+                power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VPP, POWER_FLAG_ON);                        
             }
             test_print("\tPlease use Oscilloscope to measure the voltage, and check the average value of Voltage\n\tand Pk-Pk value of Voltage.\n");
             test_print("\tPlease input test is pass[p] or fail[f].\n");

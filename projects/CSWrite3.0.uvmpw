@@ -9,7 +9,6 @@
 
   <project>
     <PathAndName>.\bootloader\bootloader.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
@@ -20,6 +19,7 @@
 
   <project>
     <PathAndName>.\test\test.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
     <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 

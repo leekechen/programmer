@@ -465,38 +465,40 @@ void test_program_power(void)
 {
     int32_t err;
     struct key_event evt;
-    struct voltage     vdd;
-    struct voltage     vpp;
+    struct tlv_voltage     vdd;
+    struct tlv_voltage     vpp;
     
     io_icsp_init();
 
-    vdd.rated = 0;
-    vpp.rated = 0;
+    vdd.value = 0;
+    vdd.type  = TLV_DESC_VOLTAGE_TYPE_VDD;
+    vpp.value = TLV_DESC_VOLTAGE_TYPE_VPP;
 
-    vpp.error = 300;
-    vdd.error = 300;
+    vpp.offset = 300;
+    vdd.offset = 300;
 
     while (1) {
-        dbg_print("[Test] Set Vdd to: %d, Vpp to:%d ...\n", vdd.rated, vpp.rated);
-        err = power_voltage_set(POWER_TYPE_VDD, &vdd);
+        dbg_print("[Test] Set Vdd to: %d, Vpp to:%d ...\n", vdd.value, vpp.value);
+        
+        err = power_voltage_set(&vdd);
         if (err) {
             dbg_print("\t power_voltage_set(vdd) Failed\n");
             return;
         }
-        err = power_voltage_set(POWER_TYPE_VPP, &vpp);
+        err = power_voltage_set(&vpp);
         if (err) {
             dbg_print("\t power_voltage_set(vpp) Failed\n");
             return;
         }
         
         dbg_print("[Test] Turn on Vdd, Vpp\n");
-        err = power_voltage_switch(POWER_TYPE_VDD, POWER_FLAG_ON);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VDD, POWER_FLAG_ON);
         if (err) {
             dbg_print("\t power_voltage_switch(vdd) Failed\n");
             return;
         }
         
-        err = power_voltage_switch(POWER_TYPE_VPP, POWER_FLAG_ON);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VPP, POWER_FLAG_ON);
         if (err) {
             dbg_print("\t power_voltage_switch(vpp) Failed\n");
             return;
@@ -504,27 +506,27 @@ void test_program_power(void)
                    
         wait_key_press(osWaitForever);
             
-        if (vdd.rated < 5500) {
-            vdd.rated += 500;
+        if (vdd.value < 5500) {
+            vdd.value += 500;
         }
-        if (vpp.rated < 9000) {
-            vpp.rated += 500;
+        if (vpp.value < 9000) {
+            vpp.value += 500;
         }
         
         dbg_print("[Test] Turn off Vdd, Vpp\n");
-        err = power_voltage_switch(POWER_TYPE_VDD, POWER_FLAG_OFF);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VDD, POWER_FLAG_OFF);
         if (err) {
             dbg_print("\t power_voltage_switch(vdd) Failed\n");
             return;
         }
         
-        err = power_voltage_switch(POWER_TYPE_VPP, POWER_FLAG_OFF);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VPP, POWER_FLAG_OFF);
         if (err) {
             dbg_print("\t power_voltage_switch(vpp) Failed\n");
             return;
         }
 
-        if (vdd.rated >= 5500 && vpp.rated >= 9000) { 
+        if (vdd.value >= 5500 && vpp.value >= 9000) { 
             
             wait_key_press(osWaitForever);
             return;
@@ -536,26 +538,28 @@ void test_programing(void)
 {
     int32_t err;
     int32_t i;
-    struct voltage     vdd;
-    struct voltage     vpp;
+    struct tlv_voltage     vdd;
+    struct tlv_voltage     vpp;
 
 
     io_icsp_init();
+    vdd.type = TLV_DESC_VOLTAGE_TYPE_VDD;
+    vdd.value = 5000;
+    
+    vpp.type  = TLV_DESC_VOLTAGE_TYPE_VPP;
+    vpp.value = 8500;
 
-    vdd.rated = 5000;
-    vpp.rated = 8500;
-
-    vpp.error = 300;
-    vdd.error = 300;
+    vpp.offset = 300;
+    vdd.offset = 300;
 
     dbg_print("[Test] Programming test\n");
-    dbg_print("[Test] Set Vdd to: %d, Vpp to: %d\n", vdd.rated, vpp.rated);
-    err = power_voltage_set(POWER_TYPE_VDD, &vdd);
+    dbg_print("[Test] Set Vdd to: %d, Vpp to: %d\n", vdd.value, vpp.value);
+    err = power_voltage_set(&vdd);
     if (err) {
         dbg_print("\t power_voltage_set(vdd) Failed\n");
         return;
     }
-    err = power_voltage_set(POWER_TYPE_VPP, &vpp);
+    err = power_voltage_set(&vpp);
     if (err) {
         dbg_print("\t power_voltage_set(vpp) Failed\n");
         return;
@@ -564,12 +568,12 @@ void test_programing(void)
     while (1) {
             
         dbg_print("[Test] Turn on Vdd and Vpp...\n");
-        err = power_voltage_switch(POWER_TYPE_VDD, POWER_FLAG_ON);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VDD, POWER_FLAG_ON);
         if (err) {
             dbg_print("\t power_voltage_switch(vdd) Failed\n");
             return;
         }
-        err = power_voltage_switch(POWER_TYPE_VPP, POWER_FLAG_ON);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VPP, POWER_FLAG_ON);
         if (err) {
             dbg_print("\t power_voltage_switch(vpp) Failed\n");
             return;
@@ -586,13 +590,13 @@ void test_programing(void)
         }
         
         dbg_print("[Test] Turn off Vdd, Vpp\n");
-        err = power_voltage_switch(POWER_TYPE_VDD, POWER_FLAG_OFF);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VDD, POWER_FLAG_OFF);
         if (err) {
             dbg_print("\t power_voltage_switch(vdd) Failed\n");
             return;
         }
         
-        err = power_voltage_switch(POWER_TYPE_VPP, POWER_FLAG_OFF);
+        err = power_voltage_switch(TLV_DESC_VOLTAGE_TYPE_VPP, POWER_FLAG_OFF);
         if (err) {
             dbg_print("\t power_voltage_switch(vpp) Failed\n");
             return;

@@ -91,11 +91,13 @@ static inline void io_icsp_init(void)
 //    LL_GPIO_SetPinPull(IO_ICSP_PORT, IO_ICSP_DA2, LL_GPIO_PULL_DOWN);
 //    LL_GPIO_SetPinPull(IO_ICSP_PORT, IO_ICSP_CLK, LL_GPIO_PULL_DOWN);
     
-    LL_GPIO_SetOutputPin(IO_OE_PORT, IO_OE);
+    
 }
 
 static inline void io_icsp_da_set_in(void)
 {
+    LL_GPIO_SetOutputPin(GPIOE, LL_GPIO_PIN_2);
+    
     LL_GPIO_SetPinOutputType(IO_ICSP_PORT, IO_ICSP_DA, LL_GPIO_OUTPUT_OPENDRAIN);
     LL_GPIO_SetPinPull(IO_ICSP_PORT, IO_ICSP_DA, LL_GPIO_PULL_NO);
     LL_GPIO_SetPinMode(IO_ICSP_PORT, IO_ICSP_DA, IO_ICSP_IN);
@@ -103,6 +105,8 @@ static inline void io_icsp_da_set_in(void)
 
 static inline void io_icsp_da_set_out(void)
 {
+    LL_GPIO_ResetOutputPin(GPIOE, LL_GPIO_PIN_2);
+    
     LL_GPIO_SetPinOutputType(IO_ICSP_PORT, IO_ICSP_DA, LL_GPIO_OUTPUT_PUSHPULL);
     LL_GPIO_SetPinPull(IO_ICSP_PORT, IO_ICSP_DA, LL_GPIO_PULL_UP);
     LL_GPIO_SetPinMode(IO_ICSP_PORT, IO_ICSP_DA, IO_ICSP_OUT);

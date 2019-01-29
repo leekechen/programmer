@@ -17,73 +17,72 @@
 
 int32_t test_flash_map(void)
 {
-    int32_t i;
-    int32_t err;
-    uint32_t addr;
-    uint8_t src[256];
-    uint8_t dst[256];
-    uint32_t* ptr_src = (uint32_t*)src;
-    uint32_t* ptr_dst = (uint32_t*)dst;
+//    int32_t i;
+//    int32_t err;
+//    uint32_t addr;
+//    uint8_t src[256];
+//    uint8_t dst[256];
+//    uint32_t* ptr_src = (uint32_t*)src;
+//    uint32_t* ptr_dst = (uint32_t*)dst;
 
-    uint32_t size = 512*1024;
-    
-    flash_map_init();
-    
-    flash_map_erase(0);
-    
-     for (addr = 0; addr < size; addr += sizeof(dst)) { 
-        printf("Verify Erase addr=0x%08x~0x%08x ... ", addr, addr + sizeof(dst));  
-        
-        memset(dst, 0, sizeof(dst));
-        err = flash_map_read(0, addr, dst, sizeof(dst));
-        if (err != sizeof(dst)) {
-            dbg_print("w25qxx_read() failed\n");
-            return err;
-        }
+//    uint32_t size = 512*1024;
+//    
+//    flash_map_init();
+//    
+//    flash_map_erase(0);
+//    
+//     for (addr = 0; addr < size; addr += sizeof(dst)) { 
+//        printf("Verify Erase addr=0x%08x~0x%08x ... ", addr, addr + sizeof(dst));  
+//        
+//        memset(dst, 0, sizeof(dst));
+//        err = flash_map_read(0, addr, dst, sizeof(dst));
+//        if (err != sizeof(dst)) {
+//            dbg_print("w25qxx_read() failed\n");
+//            return err;
+//        }
 
-        for (i = 0; i < sizeof(dst); i++) {
-            if (dst[i] != 0xFF) {
-                printf("failed, 0x%08x != 0x%08x\n", ptr_dst[i], (addr+i));
-                dbg_dump("Error Erase", dst, sizeof(dst));
-                return -1;
-            }
-        }  
-        dbg_print("Passed!\n");        
-    }  
-    
-    for (addr = 0; addr < size; addr += sizeof(src)) {
-        for (i = 0; i < (sizeof(src)/4); i++) {
-            ptr_src[i] = addr + i;
-        }
+//        for (i = 0; i < sizeof(dst); i++) {
+//            if (dst[i] != 0xFF) {
+//                printf("failed, 0x%08x != 0x%08x\n", ptr_dst[i], (addr+i));
+//                dbg_dump("Error Erase", dst, sizeof(dst));
+//                return -1;
+//            }
+//        }  
+//        dbg_print("Passed!\n");        
+//    }  
+//    
+//    for (addr = 0; addr < size; addr += sizeof(src)) {
+//        for (i = 0; i < (sizeof(src)/4); i++) {
+//            ptr_src[i] = addr + i;
+//        }
 
-        printf("Program: addr=0x%08x~0x%08x ... ", addr, addr + sizeof(src));
-        err = flash_map_write(0, addr, src, sizeof(src));
-        if (err != sizeof(src)) {
-            printf("flash_map_write() failed\n");
-            return err;
-        }
-        printf("Passed! ");
+//        printf("Program: addr=0x%08x~0x%08x ... ", addr, addr + sizeof(src));
+//        err = flash_map_write(0, addr, src, sizeof(src));
+//        if (err != sizeof(src)) {
+//            printf("flash_map_write() failed\n");
+//            return err;
+//        }
+//        printf("Passed! ");
 
-        printf("Verify ... ");
+//        printf("Verify ... ");
 
-        memset(ptr_dst, 0, sizeof(src));
-        err = flash_map_read(0, addr, dst, sizeof(dst));
-        if (err != sizeof(dst)) {
-            printf(" flash_map_read() failed\n");
-            return err;
-        }
+//        memset(ptr_dst, 0, sizeof(src));
+//        err = flash_map_read(0, addr, dst, sizeof(dst));
+//        if (err != sizeof(dst)) {
+//            printf(" flash_map_read() failed\n");
+//            return err;
+//        }
 
-        for (i = 0; i < (sizeof(dst)/4); i++) {
-            if (ptr_dst[i] != (addr + i)) {
-                printf("failed, 0x%08x != 0x%08x\n", ptr_dst[i], (addr+i));
-                dbg_dump("dst data", dst, sizeof(dst));
-                dbg_dump("src data", src, sizeof(src));
-                return -1;
-            }
-
-        }
-        printf("Passed\n");
-    }
+//        for (i = 0; i < (sizeof(dst)/4); i++) {
+//            if (ptr_dst[i] != (addr + i)) {
+//                printf("failed, 0x%08x != 0x%08x\n", ptr_dst[i], (addr+i));
+//                dbg_dump("dst data", dst, sizeof(dst));
+//                dbg_dump("src data", src, sizeof(src));
+//                return -1;
+//            }
+//        }
+//        printf("Passed\n");
+//    }
     return 0;
 }
 
