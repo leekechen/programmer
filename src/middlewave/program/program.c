@@ -153,6 +153,10 @@ int32_t chip_program_setup(uint8_t bitmap)
     return ERR_OK;
 }
 
+int32_t chip_program_get_size(void)
+{
+}
+
 int32_t chip_program(uint32_t bitmap)
 {
     int32_t err; 

@@ -92,7 +92,7 @@ static struct file_ext file_hex = {
 static struct file_operation file_ic_ops= {
     .open       = file_ic_open,
     .read       = file_ic_read,
-    .write      = file_ic_write,
+    //.write      = file_ic_write,
     .close      = file_ic_close,
     .get_size   = file_ic_get_size,
 };

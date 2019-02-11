@@ -36,9 +36,7 @@
 
 
 #define PACKET_MAX_LENGTH                                        0x0100
-#define PACKET_MAX_PAYLOAD_LENGTH                                (246)
 
-#define FILE_SEGEMENT_LENGTH                                     (246) 
 
 struct packet {
     uint8_t     sync;
@@ -51,7 +49,6 @@ struct file_info {
     uint8_t             id;
     int32_t             length;
     uint32_t            next_segment_id;
-//    uint32_t            addr;
     void*               fp;
 } ;
 

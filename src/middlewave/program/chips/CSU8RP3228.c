@@ -1076,6 +1076,7 @@ int32_t csu8rp3228_readback(struct tlv_file* hex)
             return err;
         }
         dbg_print("0x%02x%02x\n", buf[0], buf[1]);
+        file_ic_code_write(addr, buf, 2);
     }
 
     return ERR_OK;

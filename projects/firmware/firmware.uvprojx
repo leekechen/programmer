@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>HAVE_BOOTLOADER OS_SUPPORT</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\src\common;..\..\src\firmware;..\..\src\middlewave\program;..\..\src\middlewave\program\timing;..\..\src\middlewave\files;..\..\src\middlewave\protocol;..\..\src\middlewave\crc;..\..\src\middlewave\emWin\Config;..\..\src\middlewave\emWin\inc;..\..\src\middlewave\emWin\OS;..\..\src\drivers\bsp;..\..\src\drivers\dbg;..\..\src\drivers\spi_flash;..\..\src\drivers\usb;..\..\src\drivers\fram;..\..\src\drivers\lcd;..\..\src\drivers\power;.\RTE\USB;..\..\..\trunk;..\..\src\middlewave\gui</IncludePath>
+              <IncludePath>..\..\src\common;..\..\src\firmware;..\..\src\middlewave\program;..\..\src\middlewave\program\timing;..\..\src\middlewave\files;..\..\src\middlewave\protocol;..\..\src\middlewave\crc;..\..\src\middlewave\emWin\Config;..\..\src\middlewave\emWin\inc;..\..\src\middlewave\emWin\OS;..\..\src\drivers\bsp;..\..\src\drivers\dbg;..\..\src\drivers\spi_flash;..\..\src\drivers\usb;..\..\src\drivers\fram;..\..\src\drivers\lcd;..\..\src\drivers\power;.\RTE\USB;..\..\..\trunk;..\..\src\middlewave\gui;..\..\..\programmer</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

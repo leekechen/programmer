@@ -18,6 +18,10 @@
 
 #define RTE_CMSIS_RTOS2                 /* CMSIS-RTOS2 */
         #define RTE_CMSIS_RTOS2_RTX5            /* CMSIS-RTOS2 Keil RTX5 */
+#define RTE_Compiler_EventRecorder
+          #define RTE_Compiler_EventRecorder_DAP
+#define RTE_Compiler_IO_File            /* Compiler I/O: File */
+          #define RTE_Compiler_IO_File_FS         /* Compiler I/O: File (File System) */
 #define RTE_Compiler_IO_STDERR          /* Compiler I/O: STDERR */
           #define RTE_Compiler_IO_STDERR_User     /* Compiler I/O: STDERR User */
 #define RTE_Compiler_IO_STDIN           /* Compiler I/O: STDIN */
@@ -50,6 +54,10 @@
         #define RTE_Drivers_SPI5                /* Driver SPI5 */
         #define RTE_Drivers_SPI6                /* Driver SPI6 */
 #define RTE_Drivers_USBD0               /* Driver USBD0 */
+#define RTE_FileSystem_Core             /* File System Core */
+          #define RTE_FileSystem_LFN              /* File System with Long Filename support */
+          #define RTE_FileSystem_Debug            /* File System Debug Version */
+#define RTE_FileSystem_Drive_NOR_0      /* File System NOR Flash Drive 0 */
 #define RTE_USB_Core                    /* USB Core */
           #define RTE_USB_Core_Release            /* USB Core Release Version */
 #define RTE_USB_Device_0                /* USB Device 0 */

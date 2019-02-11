@@ -108,8 +108,9 @@ int32_t ui_key_process(struct key_event* key)
         ret = cswrite_cfg_set_chip((const char*)chip->name, chip->id, chip->id_length);
         if (ret) {
             goto ERR_UI_KEY_PROCESS;
-        }  
+        }
 
+        ret = file_ic_set_code();
         /* 
         * The value of Vdd and Vpp had been setup when system initialize or file_hex updated.
         * So we should avoid the charging process at here.

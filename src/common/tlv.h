@@ -16,6 +16,9 @@
 #define TLV_FILE_ID_CFG                         0x06
 #define TLV_FILE_ID_MAX                         (TLV_FILE_ID_CFG)
 
+#define FILE_SEGEMENT_LENGTH                    (246) 
+
+
 #define TLV_FILE_HEAD_LENGTH                   (5)
 
 #define TLV_FILE_CRC32_LENGTH                  (4)
